@@ -7,4 +7,4 @@
 
 | **Challenge Name**| **Link** |
 | -----------| ----------- |
-| _Challenge 01_| [GoTo](https://musaabshalaldeh.github.io/401-data-structures-and-algorithms/PythonCodeChallenge-01/README)|
+| _Challenge 01_| [GoTo](PythonCodeChallenge-01/README.md)|
