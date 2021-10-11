@@ -8,3 +8,4 @@
 | **Challenge Name**| **Link** |
 | -----------| ----------- |
 | _Challenge 01_| [GoTo](PythonCodeChallenge-01/README.md)|
+| _Challenge 02_| [GoTo](PythonCodeChallenge-02/README.md)|
