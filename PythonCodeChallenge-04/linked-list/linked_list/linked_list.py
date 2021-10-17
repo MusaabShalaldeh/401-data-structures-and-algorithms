@@ -51,15 +51,17 @@ class LinkedList:
         returns: True/False
         """
         current = self.head
-        while(True):
-            if current.data == val:
-                return True
-            elif current.data != val and current._next == None:
-                return False
-            else:
-                current = current._next
+        
+        if(current != None):
+            while(True):
+                if current.data == val:
+                    return True
+                elif current.data != val and current._next == None:
+                    return False
+                else:
+                    current = current._next
 
-    def to_string(self):
+    def __str__(self):
         """"
         Returns a string containing all elements that exist within the list, if none it will return NULL only.
 
@@ -83,3 +85,62 @@ class LinkedList:
 
             
         return "NULL"
+
+    def append(self,value):
+        """
+        Add a value to the end of the linked list, if none exists the value will be the head of the list.
+        """
+        current = self.head
+        
+        if(current != None):
+            while(True):
+                if current._next != None:
+                    current = current._next
+                else:
+                    current._next = Node(value)
+                    break
+        else:
+            self.head = Node(value)
+    
+    def insert_before(self,before_value,value):
+        """
+        Insert a given value before a specificed value in the linked list.
+        """
+        current = self.head
+
+        if(current != None):
+            while(True):
+                if current._next == None:
+                    if current.data == before_value:
+                        self.head = Node(value,current)
+                        break
+                    else:
+                        break
+                elif current._next.data == before_value:
+                    current._next = Node(value,current._next)
+                    break
+                else:
+                    current = current._next
+        else:
+            self.head = Node(value)
+
+
+    def insert_after(self,after_value,value):
+        """
+        Insert a given value after a specificed value in the linked list.
+        """
+        current = self.head
+
+        if(current != None):
+            while(True):
+                if current._next == None:
+                    if current.data == after_value:
+                        current._next = Node(value,current._next)
+                        break
+                    else:
+                        break
+                elif current.data == after_value:
+                    current._next = Node(value,current._next)
+                    break
+                else:
+                    current = current._next
