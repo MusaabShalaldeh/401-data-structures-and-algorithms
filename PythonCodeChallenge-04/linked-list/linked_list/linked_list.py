@@ -177,3 +177,25 @@ class LinkedList:
                     current = current._next
         else:
             return None
+
+    @staticmethod
+    def zipLists(first_list,second_list):
+        current = first_list.head
+
+        if(current != None and second_list.head != None):
+            newList = LinkedList()
+            counter = 1
+            while(True):
+                if current._next == None and counter == 2:
+                    newList.append(current.data)
+                    return newList
+
+                elif current._next == None and counter == 1:
+                    newList.append(current.data)
+                    counter = 2
+                    current = second_list.head
+                else:
+                    newList.append(current.data)
+                    current = current._next     
+        else:
+            raise Exception("One of the provided arguments does not meet the required type of data/ either linked list is empty...")  
