@@ -144,3 +144,36 @@ class LinkedList:
                     break
                 else:
                     current = current._next
+
+    def kthFromEnd(self,input):
+        current = self.head
+
+        if input == 1:
+            return current.data
+        elif(current != None and current._next != None and input > 0):
+            count = 1
+            second_pointer = [None]
+
+            while(True):
+                if count == input:
+                    second_pointer[0] = current
+                elif count - input == input:
+                    second_pointer[0] = second_pointer[0]._next
+
+                if current._next == None:
+                    if(count < input):
+                        return None
+                    else:
+                        return second_pointer[0].data
+                else:
+                    current = current._next
+                    count += 1
+
+        elif (current != None and current._next != None and input == 0):
+            while(True):
+                if current._next == None:
+                    return current.data
+                else:
+                    current = current._next
+        else:
+            return None
