@@ -297,3 +297,162 @@ def test_linked_list_insert_after_last():
 
   # Assert
   assert actual == expected
+
+
+def test_linked_list_kth():
+  #Arrange
+  expected = 8
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(8)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(3)
+
+  # Assert
+  assert actual == expected
+
+def test_second_linked_list_kth():
+  #Arrange
+  expected = 2
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(8)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(4)
+
+  # Assert
+  assert actual == expected
+
+def test_third_linked_list_kth():
+  #Arrange
+  expected = 10
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(10)
+  ll.insert(86)
+  ll.insert(6)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(5)
+
+  # Assert
+  assert actual == expected
+
+def test_fourth_linked_list_kth():
+  #Arrange
+  expected = 2
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(10)
+  ll.insert(86)
+  ll.insert(6)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(0)
+
+  # Assert
+  assert actual == expected
+
+
+def test_linked_list_kth_greaterthan():
+  #Arrange
+  expected = None
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(10)
+  ll.insert(86)
+  ll.insert(6)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(8)
+
+  # Assert
+  assert actual == expected
+
+
+
+def test_linked_list_kth_same_length():
+  #Arrange
+  expected = 2
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(10)
+  ll.insert(86)
+  ll.insert(6)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(6)
+
+  # Assert
+  assert actual == expected
+
+def test_linked_list_kth_negative_k():
+  #Arrange
+  expected = None
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(10)
+  ll.insert(86)
+  ll.insert(6)
+  ll.insert(3)
+  ll.insert(1)
+
+  actual = ll.kthFromEnd(-5)
+
+  # Assert
+  assert actual == expected
+
+
+def test_linked_list_size_1():
+  #Arrange
+  expected = 10
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(10)
+
+  actual = ll.kthFromEnd(1)
+
+  # Assert
+  assert actual == expected
+
+
+
+def test_linked_list_kth_happy_path():
+  #Arrange
+  expected = 86
+  ll = LinkedList()
+
+  #Actual
+  ll.insert(2)
+  ll.insert(10)
+  ll.insert(86)
+  ll.insert(6)
+  ll.insert(3)
+
+  actual = ll.kthFromEnd(3)
+
+  # Assert
+  assert actual == expected
