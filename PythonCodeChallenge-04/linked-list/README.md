@@ -20,6 +20,8 @@ Creating a single linked list with few methods to compliment its usage.
 
 ***Cost of inserting an element after a specified value in the list: O(n)***
 
+***Cost of kthFromEnd method: O(n)***
+
 ## API
 
 
@@ -73,4 +75,9 @@ Creating a single linked list with few methods to compliment its usage.
     insert_after Method
     ```
     Insert a given value after a specificed value in the linked list.
+    ```
+
+    kthFromEnd Method
+    ```
+    get the element from the end of the list using a provided index.
     ```
