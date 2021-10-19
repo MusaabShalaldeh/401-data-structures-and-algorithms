@@ -156,7 +156,7 @@ def test_linked_list_to_string():
   ll.insert(5)
   ll.insert(9)
   ll.insert(29)
-  actual = ll.to_string()
+  actual = str(ll)
 
   # Assert
   assert actual == expected
@@ -168,8 +168,132 @@ def test_linked_empty_list_to_string():
   ll = LinkedList()
 
   # Act
-  actual = ll.to_string()
+  actual = str(ll)
 
   # Assert
   assert actual == expected
 
+
+
+
+def test_linked_list_append():
+  # Arrange
+  expected = "{ 9 } -> { 5 } -> { 0 } -> { 29 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.insert(0)
+  ll.insert(5)
+  ll.insert(9)
+  ll.append(29)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+
+def test_linked_list_append_multi_values():
+  # Arrange
+  expected = "{ 0 } -> { 5 } -> { 9 } -> { 29 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.append(0)
+  ll.append(5)
+  ll.append(9)
+  ll.append(29)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+def test_linked_list_append_empty():
+  # Arrange
+  expected = "{ 29 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.append(29)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+
+def test_linked_list_insert_before():
+  # Arrange
+  expected = "{ 9 } -> { 29 } -> { 5 } -> { 0 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.insert(0)
+  ll.insert(5)
+  ll.insert(9)
+  ll.insert_before(5,29)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+
+def test_linked_list_insert_before_not_found():
+  # Arrange
+  expected = "{ 9 } -> { 7 } -> { 0 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.insert(0)
+  ll.insert(7)
+  ll.insert(9)
+  ll.insert_before(5,29)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+def test_linked_list_insert_before_first():
+  # Arrange
+  expected = "{ 29 } -> { 1 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.insert(1)
+  ll.insert_before(1,29)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+
+
+def test_linked_list_insert_after():
+  # Arrange
+  expected = "{ 9 } -> { 5 } -> { 25 } -> { 0 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.insert(0)
+  ll.insert(5)
+  ll.insert(9)
+  ll.insert_after(5,25)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected
+
+
+
+def test_linked_list_insert_after_last():
+  # Arrange
+  expected = "{ 9 } -> { 5 } -> { 0 } -> { 25 } -> NULL"
+  ll = LinkedList()
+
+  # Act
+  ll.insert(0)
+  ll.insert(5)
+  ll.insert(9)
+  ll.insert_after(0,25)
+  actual = str(ll)
+
+  # Assert
+  assert actual == expected

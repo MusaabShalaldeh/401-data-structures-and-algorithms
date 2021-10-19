@@ -14,6 +14,12 @@ Creating a single linked list with few methods to compliment its usage.
 
 ***Cost of inserting an element to the end of the list: O(n)***
 
+***Cost of appending an element to the end of the list: O(n)***
+
+***Cost of inserting an element before a specified value in the list: O(n)***
+
+***Cost of inserting an element after a specified value in the list: O(n)***
+
 ## API
 
 
@@ -39,7 +45,7 @@ Creating a single linked list with few methods to compliment its usage.
     ```
 
 
-    to_string Method
+    __str__ Method
     ```
         Returns a string containing all elements that exist within the list, if none it will return NULL only.
 
@@ -50,4 +56,21 @@ Creating a single linked list with few methods to compliment its usage.
         None
 
         returns: String
+    ```
+
+
+    append Methpd
+    ```
+    Adds a value to the end of the linked list
+    ```
+
+    insert_before Method
+    ```
+    Insert a given value before a specificed value in the linked list.
+    ```
+
+
+    insert_after Method
+    ```
+    Insert a given value after a specificed value in the linked list.
     ```
