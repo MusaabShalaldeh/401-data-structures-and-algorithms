@@ -22,6 +22,8 @@ Creating a single linked list with few methods to compliment its usage.
 
 ***Cost of kthFromEnd method: O(n)***
 
+***Cost of test_linked_list_zip method: O(n)***
+
 ## API
 
 
@@ -80,4 +82,9 @@ Creating a single linked list with few methods to compliment its usage.
     kthFromEnd Method
     ```
     get the element from the end of the list using a provided index.
+    ```
+
+    test_linked_list_zip
+    ```
+    merge two linked lists into one single linked list and return it
     ```

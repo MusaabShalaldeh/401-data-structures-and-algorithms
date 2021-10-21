@@ -456,3 +456,25 @@ def test_linked_list_kth_happy_path():
 
   # Assert
   assert actual == expected
+
+
+def test_linked_list_zip():
+  #Arrange
+  expected = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> NULL"
+  first_ll = LinkedList()
+  second_ll = LinkedList()
+
+  #Actual
+  first_ll.append(1)
+  first_ll.append(2)
+  first_ll.append(3)
+
+  second_ll.append(4)
+  second_ll.append(5)
+  second_ll.append(6)
+
+  newList = LinkedList.zipLists(first_ll,second_ll)
+  actual = str(newList)
+
+  # Assert
+  assert actual == expected
